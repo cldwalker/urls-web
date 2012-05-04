@@ -1,1 +1,14 @@
-%h1 Let's get ready to ru-ru-rumble...
+%div#main
+  %div.top_box
+    %h2 Last 10 Urls
+    %table.table.table-bordered.table-striped
+      %thead
+        %tr
+          %th Url
+          %th Description
+      %tbody
+        - @urls.each do |url|
+          %tr
+            %td
+              %a{href: url.name}= url.name
+            %td= url.description
