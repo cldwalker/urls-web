@@ -1,4 +1,6 @@
 ENV["RACK_ENV"] = "test"
+ENV['URLS_HOME'] = File.dirname(__FILE__) + '/.urls'
+ENV['URLS_RC'] = ''
 
 require File.dirname(__FILE__) + "/../application"
 require 'capybara/rspec'
@@ -9,3 +11,7 @@ RSpec.configure do |c|
 end
 
 Capybara.app = My::Application
+
+at_exit do
+  FileUtils.rm_rf(ENV['URLS_HOME'])
+end
