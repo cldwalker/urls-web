@@ -6,9 +6,11 @@
         %tr
           %th Url
           %th Description
+          %th Tags
       %tbody
         - @urls.each do |url|
           %tr
             %td
               %a{href: url.name}= url.name
             %td= url.desc
+            %td= url.tags
