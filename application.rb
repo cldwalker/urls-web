@@ -8,5 +8,11 @@ module My
       @urls = Url.last(10)
       haml :index
     end
+
+    get '/tag/:tag' do
+      @tag = params[:tag]
+      @urls = Url.tagged_with(params[:tag])
+      haml :tag
+    end
   end
 end

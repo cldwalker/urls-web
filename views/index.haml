@@ -1,16 +1,4 @@
 %div#main
   %div.top_box
     %h2 Last 10 Urls
-    %table.table.table-bordered.table-striped#last_urls
-      %thead
-        %tr
-          %th Url
-          %th Description
-          %th Tags
-      %tbody
-        - @urls.each do |url|
-          %tr
-            %td
-              %a{href: url.name}= url.name
-            %td= url.desc
-            %td= url.tags
+    = haml :_urls, locals: {table_id: 'last_urls'}

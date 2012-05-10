@@ -1,0 +1,4 @@
+%div#main
+  %div.top_box
+    %h2 Urls tagged with #{@tag}
+    = haml :_urls, locals: {table_id: 'tagged_urls'}
