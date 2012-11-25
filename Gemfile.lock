@@ -6,6 +6,7 @@ PATH
       haml
       sinatra
       thin
+      urls
 
 PATH
   remote: ~/code/gems/urls

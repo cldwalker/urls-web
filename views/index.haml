@@ -1,4 +1,7 @@
 %div#main
   %div.top_box
+    %input{type: 'text', id: 'url_search_text'}
+    %button{class: 'btn-primary', id: 'url_search_button'}
+      Search
     %h2 Last 10 Urls
     = haml :_urls, locals: {table_id: 'last_urls'}
